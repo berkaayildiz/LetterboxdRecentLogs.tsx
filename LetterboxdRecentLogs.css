@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+/* Root font size for responsive scaling */
+:root {
+  font-size: 16px;
+}
+
+/* Main Container */
+.recently-logged {
+  background: #181818;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  width: fit-content;
+}
+
+/* Header with title and logo */
+.recently-logged__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+/* Title */
+.recently-logged__title {
+  font-family: Inter, sans-serif;
+  color: #99AABB;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+}
+
+/* Letterboxd Logo */
+.letterboxd-logo {
+  height: 2.5rem;
+  width: auto;
+  border-radius: 0.5rem;
+}
+
+.recently-logged__row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+/* Movie Item */
+.film-card {
+  border-radius: 0.5rem;
+  width: 9.375rem;
+}
+
+.film-card__image {
+  width: 100%;
+  border-radius: 0.3125rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  object-fit: cover;
+}
+
+/* Rating */
+.film-card__rating {
+  margin-top: 0.125rem;
+  margin-left: 0.25rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.film-card__rating img {
+  width: 0.875rem;
+  height: 0.875rem;
+  margin-right: 0.05rem;
+}
+
+/* Loading and Error States */
+.recently-logged__loading,
+.recently-logged__error {
+  color: #99AABB;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+.recently-logged__error {
+  color: #ff6b6b;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  :root {
+    font-size: 6px;
+  }
+}
