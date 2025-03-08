@@ -50,25 +50,57 @@
   width: 9.375rem;
 }
 
-.film-card__image {
+.film-card__image,
+.film-card__skeleton-image {
   width: 100%;
   border-radius: 0.3125rem;
   border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.film-card__image {
   object-fit: cover;
 }
 
+.film-card__skeleton-image {
+  height: 0;
+  padding-bottom: 150%; /* Typical film poster ratio */
+}
+
 /* Rating */
-.film-card__rating {
+.film-card__rating,
+.film-card__skeleton-rating {
   margin-top: 0.125rem;
   margin-left: 0.25rem;
   display: flex;
   justify-content: flex-start;
 }
 
-.film-card__rating img {
+.film-card__rating img,
+.film-card__skeleton-star {
   width: 0.875rem;
   height: 0.875rem;
   margin-right: 0.05rem;
+}
+
+.film-card__skeleton-star {
+  margin-top: 0.3rem;
+  border-radius: 50%;
+}
+
+/* Skeleton Loading Animation */
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #303030 25%, #3a3a3a 50%, #303030 75%);
+  background-size: 200px 100%;
+  animation: skeleton-loading 1.5s infinite;
 }
 
 /* Loading and Error States */

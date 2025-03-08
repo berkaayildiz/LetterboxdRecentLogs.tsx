@@ -89,7 +89,22 @@ export const LetterboxdRecentLogs = ({
   if (loading) {
     return (
       <div className="recently-logged">
-        <div className="recently-logged__loading">Loading...</div>
+        <div className="recently-logged__header">
+          <h2 className="recently-logged__title">Recently Watched</h2>
+          <img src={letterboxdLogo} alt="Letterboxd" className="letterboxd-logo" />
+        </div>
+        <div className="recently-logged__row">
+          {[...Array(maxFilms)].map((_, index) => (
+            <div key={index} className="film-card">
+              <div className="film-card__skeleton-image skeleton"></div>
+              <div className="film-card__skeleton-rating">
+                {[...Array(5)].map((_, i) => (
+                  <div key={`skeleton-star-${i}`} className="film-card__skeleton-star skeleton"></div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }
