@@ -1,0 +1,89 @@
+/* Font can be imported from HTML for better performance */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+/* Root font size for responsive scaling */
+:root {
+    font-size: 16px;
+}
+
+/* Main Container */
+.recently-watched {
+    background: #181818;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    width: fit-content;
+}
+
+/* Header with title and logo */
+.recently-watched__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+/* Title */
+.recently-watched__title {
+    font-family: Inter, sans-serif;
+    color: #99AABB;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+}
+
+/* Letterboxd Logo */
+.letterboxd-logo {
+    height: 2.5rem;
+    width: auto;
+    border-radius: 0.5rem;
+}
+
+.recently-watched__row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+/* Movie Item */
+.movie-card {
+    border-radius: 0.5rem;
+    width: 9.375rem;
+}
+
+.movie-card__image {
+    width: 100%;
+    border-radius: 0.3125rem;
+    object-fit: cover;
+    border: 1px solid #FFFFFF26;
+}
+
+/* Rating */
+.movie-card__rating {
+    margin-top: 0.125rem;
+    margin-left: 0.25rem;
+}
+
+.movie-card__rating img {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    :root {
+        font-size: 6px;
+    }
+}

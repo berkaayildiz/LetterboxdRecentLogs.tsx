@@ -1,6 +1,7 @@
 # LetterboxdRecentLogs.tsx
 
 A simple Letterboxd styled React component that displays a user's recently watched films from Letterboxd using their public RSS feed.
+You can add it to your personal website to showcase your recent film logs, adding a touch of personality to your site.
 
 <div align="center">
   <br>
@@ -41,6 +42,13 @@ This component accepts the following props:
 |------|------|---------|-------------|
 | `username` | string | Required | Letterboxd username |
 | `count` | number | 4 | Number of films to display |
+
+## Note
+A vanilla JavaScript version of this component is available in the `LetterboxdRecentLogs-vanilla` directory with an example usage.
+You can adapt the code to your needs for non-React projects.
+
+## To-Do
+- [ ]  Add skeleton for loading state to vanilla version
 
 ## License
 This project is open-source and available under the [MIT License](LICENSE). Contributions are welcome.
